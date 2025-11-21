@@ -1,7 +1,8 @@
 # Huawei Mate 30 Pro Bootloader Unlock - Requirements
-# Core Python 3+ requirements (standard library only)
-# No external packages needed - uses built-in modules only
+
+# Required for TUI interface
+rich>=13.0.0      # Rich terminal UI library
 
 # For debugging and development (optional)
-# colorama>=0.4.4  # For colored output
+# colorama>=0.4.4  # For colored output (Windows)
 # tqdm>=4.62.0    # For progress bars

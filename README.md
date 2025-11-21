@@ -35,36 +35,61 @@
 
 ## 🔧 **Quick Start**
 
-### Prerequisites
-```bash
-# Install required tools
-sudo apt install python3 adb fastboot
+### 🚀 One-Click Setup (Recommended)
 
-# Or on Windows:
-# Download from: https://developer.android.com/studio/releases/platform-tools
+#### **Automated Installation**
+```bash
+# Clone and setup automatically
+git clone https://github.com/FreesoSaiFared/Huawei_Mate30_Pro_Unlock.git
+cd Huawei_Mate30_Pro_Unlock
+./setup.sh
+
+# Then just run:
+python3 mate30_pro_tui.py
 ```
 
-### Usage
+The TUI will **automatically**:
+- ✅ Install ADB/Fastboot (Ubuntu)
+- ✅ Detect your connected device
+- ✅ Get your IMEI automatically
+- ✅ Configure optimal settings
+- ✅ Start the unlock process
 
-#### **Easy Mode (Recommended)**
+### 📱 Manual Setup
+
+#### **Prerequisites**
 ```bash
-# Just run it!
+# Ubuntu/Debian:
+sudo apt install python3 adb fastboot
+
+# Or use setup script:
+./setup.sh
+
+# Windows: Download from:
+# https://developer.android.com/studio/releases/platform-tools
+```
+
+#### **Usage Options**
+
+##### **🎯 TUI Interface (Recommended)**
+```bash
+# Full automated TUI with rich interface
+python3 mate30_pro_tui.py
+```
+
+##### **⚡ Command Line Interface**
+```bash
+# Simple CLI version
 python3 mate30_pro_unlock.py
 ```
 
-#### **Power User Mode**
+##### **🔧 Advanced Configuration**
 ```python
-# Edit the script to set:
-staticimei = 123456789012345  # Your IMEI
+# Edit mate30_pro_tui.py or mate30_pro_unlock.py:
+staticimei = 123456789012345  # Your IMEI (optional - auto-detected)
 quickstart = True             # Skip confirmations
 autoreboot = True             # Handle bootloader protection
-```
-
-#### **Development Mode**
-```bash
-# Enable debug mode in script:
 debug_mode = True             # See detailed output
-unknownfail = False           # Continue on unknown responses
 ```
 
 ## 🎯 **Device Setup**
@@ -90,6 +115,28 @@ adb reboot bootloader
 ```
 
 ## 🚀 **Advanced Features**
+
+### 🎨 **Rich TUI Interface (NEW!)**
+Full terminal user interface with real-time progress:
+
+```bash
+python3 mate30_pro_tui.py
+```
+
+#### **TUI Features:**
+- 🤖 **Automatic dependency installation** (Ubuntu)
+- 📱 **Device auto-detection** and information display
+- 🔍 **Automatic IMEI detection** via ADB
+- 📊 **Real-time progress** with ETA and statistics
+- 💾 **Progress saving** and recovery
+- 🎨 **Rich terminal interface** with colors and animations
+- 🛡️ **Enhanced error handling** with detailed feedback
+
+#### **One-Click Operation:**
+1. **Connect device** with USB debugging enabled
+2. **Run TUI** - handles everything automatically
+3. **Wait** - monitors progress in real-time
+4. **Done** - device unlocked automatically
 
 ### **Static IMEI Testing**
 Perfect for developers and frequent testing:
